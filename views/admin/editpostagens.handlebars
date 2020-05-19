@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-body">
+        <h4>Nova postagem</h4>
+        <form action="/admin/postagem/edit" method="POST">
+            <input type="hidden" name="id" value="{{postagem._id}}">
+            <label for="titulo">Titulo</label>
+            <input value="{{postagem.titulo}}" type="text" name="titulo" class="form-control">
+            <label for="slug">slug</label>
+            <input value="{{postagem.slug}}" type="text" name="slug" class="form-control">
+            <label for="descricao">Descricao</label>
+            <input value="{{postagem.descricao}}" type="text" name="descricao" class="form-control">
+            <label for="conteudo">Conteudo</label>
+            <textarea name="conteudo"cols="30" rows="10" class="form-control">{{postagem.conteudo}}</textarea>
+            <label for="categoria">categoria</label>
+            <select name="categoria" class="my-3 custom-select" value={{postagem.categoria}}>
+                {{#each categorias}}
+                <option value="{{_id}}">{{nome}}</option>
+                {{else}}
+                    <option value="0">Nenhuma categoria registrada</option>
+                {{/each}}
+            </select>
+            <br>
+            <button type="submit" class="btn btn-success">Editar postagem</button>
+        </form>
+    </div>
+</div>
