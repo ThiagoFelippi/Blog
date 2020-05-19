@@ -1,8 +1,7 @@
 # Blog criado com node no backend
 
-
-Fotos
-
+![Foto1](https://github.com/ThiagoFelippi/Blog/blob/master/foto1.png)
+![Foto2]()
 
 #### O blog permite vizualizar as postagens registradas, caso o usuário seja admin pode adicionar novas ponstagens e categorias
 
